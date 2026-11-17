@@ -1,0 +1,25 @@
+{
+  "name": "playwright-ts-e2e-sample",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript UI and API test sample against public practice sites",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:ui": "playwright test --project=ui",
+    "test:api": "playwright test --project=api",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}
