@@ -53,7 +53,7 @@ A tag is part of the test title, for example `test('standard user logs in @smoke
 
 - **Page objects** keep locators in one place. When the site changes a selector, I fix one file, not ten specs. Assertions stay in the specs, except small helpers like `expectLoaded`.
 - **Fixtures** replace repeated setup. A test that needs a logged-in user asks for `loggedInInventory` and gets it. This is more readable than `beforeEach` copies and only runs when needed.
-- **Locators** use `data-test` ids and roles, not CSS paths.
+- **Locators** use `data-test` ids (set once as `testIdAttribute` in the config) and roles, not CSS paths.
 - **API schema checks** are small type guards instead of a schema library, to keep the sample without extra dependencies. In a larger project I would use a schema library or generated types from OpenAPI.
 - **Retries** are on in CI only (2), with a trace on the first retry. Locally a failure should fail at once.
 
